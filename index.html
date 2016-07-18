@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试预览打印</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="LodopFuncs.js"></script>
+</head>
+<body>
+	
+	<a href="javascript:checkisinstall();">查看是否安装控件</a>
+	<a href="javascript:print_preview();">预览打印</a>
+<!-- 	<a href="javascript:print_set();">打印维护</a> -->
+	<a href="javascript:print_de();">打印设计</a>
+	<script type="text/javascript">
+		var LODOP;
+		function checkisinstall() {
+			// body...
+			try{
+				var lodop = getLodop();
+				if (lodop.VERSION) {
+					if (lodop.CVERSION) {
+						alert("当前云打印控件可用"+lodop.CVERSION);
+					}else{
+						alert("当前安装了lodop控件"+lodop.VERSION);
+					}
+				}
+			}catch(err){
+
+			}
+
+		}
+		function createonetable(){
+			LODOP = getLodop();
+			
+			LODOP.PRINT_INITA(-3,1,800,2996,"打印控件功能演示_Lodop功能_空白练习");
+			LODOP.ADD_PRINT_SETUP_BKIMG("<img border='0' src='http://blog.chiao.me/img/book.jpg'>");
+			LODOP.SET_SHOW_MODE("BKIMG_LEFT",0);
+			LODOP.SET_SHOW_MODE("BKIMG_TOP",0);
+			LODOP.SET_SHOW_MODE("BKIMG_WIDTH","210.08mm");
+			LODOP.SET_SHOW_MODE("BKIMG_HEIGHT","297.13mm");
+			LODOP.SET_SHOW_MODE("BKIMG_IN_PREVIEW",true);
+			LODOP.ADD_PRINT_TEXT(108,471,60,22,"张小二");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.SET_PRINT_STYLEA(0,"Angle",-90);
+			LODOP.ADD_PRINT_TEXT(136,446,44,19,"宁 夏");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.SET_PRINT_STYLEA(0,"Angle",-90);
+			LODOP.ADD_PRINT_TEXT(167,422,155,26,"电气工程及其自动化");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",8);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.SET_PRINT_STYLEA(0,"Angle",-90);
+			LODOP.ADD_PRINT_TEXT(228,320,38,20,"2016");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.SET_PRINT_STYLEA(0,"Angle",-90);
+			LODOP.ADD_PRINT_TEXT(271,320,25,20,"07");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.SET_PRINT_STYLEA(0,"Angle",-90);
+			LODOP.ADD_PRINT_TEXT(295,319,30,20,"18");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.SET_PRINT_STYLEA(0,"Angle",-90);
+			LODOP.ADD_PRINT_TEXT(703,123,151,38,"张小二\n");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",17);
+			LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(746,221,100,25,"宁 夏");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(788,170,117,30,"电气工程");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(788,353,225,30,"电气工程及其自动化");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",11);
+			LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(829,337,31,30,"9");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(828,407,42,26,"4");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(989,456,100,31,"2016");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Alignment",2);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(988,556,48,30,"07");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(988,601,64,30,"18");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",14);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+			LODOP.ADD_PRINT_TEXT(991,178,119,20,"201601020322");
+			LODOP.SET_PRINT_STYLEA(0,"FontName","楷体");
+			LODOP.SET_PRINT_STYLEA(0,"FontSize",10);
+			LODOP.SET_PRINT_STYLEA(0,"Bold",1);
+
+
+		}
+
+		function print_preview() {
+			createonetable();
+			LODOP.PREVIEW();
+		}
+
+		function print_set() {
+			createonetable();
+			LODOP.PRINT_SETUP();
+		}
+
+		function print_de() {
+			createonetable();
+			LODOP.PRINT_DESIGN();
+		}
+
+		
+	</script>
+</body>
+</html>
